@@ -48,6 +48,7 @@ printer parameters.
 %doc %{_texmfdistdir}/doc/generic/shade/README
 %doc %{_texmfdistdir}/doc/generic/shade/description.pdf
 %doc %{_texmfdistdir}/doc/generic/shade/description.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +59,5 @@ printer parameters.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
