@@ -6,7 +6,7 @@
 # catalog-version 1
 Name:		texlive-shade
 Version:	1
-Release:	9
+Release:	10
 Summary:	Shade pieces of text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/shade
