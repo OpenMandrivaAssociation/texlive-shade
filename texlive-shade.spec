@@ -1,18 +1,12 @@
-# revision 22212
-# category Package
-# catalog-ctan /macros/generic/shade
-# catalog-date 2011-04-25 22:01:30 +0200
-# catalog-license lppl1
-# catalog-version 1
 Name:		texlive-shade
-Version:	1
-Release:	11
+Version:	22212
+Release:	1
 Summary:	Shade pieces of text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/shade
 License:	LPPL1
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shade.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shade.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shade.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shade.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ shading dependent on the resolution used in the Metafont
 printer parameters.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,24 +36,10 @@ printer parameters.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1-2
-+ Revision: 755976
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1-1
-+ Revision: 719520
-- texlive-shade
-- texlive-shade
-- texlive-shade
-- texlive-shade
-
