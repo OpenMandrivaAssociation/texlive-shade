@@ -1,6 +1,6 @@
 Name:		texlive-shade
 Version:	22212
-Release:	1
+Release:	2
 Summary:	Shade pieces of text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/shade
