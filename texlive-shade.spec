@@ -3,7 +3,7 @@ Version:	22212
 Release:	2
 Summary:	Shade pieces of text
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/shade
+URL:		https://www.ctan.org/tex-archive/macros/generic/shade
 License:	LPPL1
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shade.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shade.doc.r%{version}.tar.xz
